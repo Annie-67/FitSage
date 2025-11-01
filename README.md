@@ -203,7 +203,6 @@ FitSage/
 │   ├── public/
 │   ├── package.json
 │   └── .env.example
-├── logo.png
 └── README.md
 ```
 
@@ -250,22 +249,6 @@ FitSage/
 ### Chat
 - `POST /api/chat` - Send message to AI coach
 
-## Deployment
-
-### Backend (Render)
-1. Create a new Web Service on [Render](https://render.com)
-2. Connect your repository
-3. Set build command: `cd backend && npm install`
-4. Set start command: `cd backend && npm start`
-5. Add environment variables from `.env`
-
-### Frontend (Vercel)
-1. Install Vercel CLI: `npm i -g vercel`
-2. Navigate to frontend: `cd frontend`
-3. Run: `vercel`
-4. Set environment variable: `VITE_API_URL` to your backend URL
-5. Follow the prompts to deploy
-
 ## Environment Variables
 
 ### Backend (.env)
@@ -285,37 +268,6 @@ FRONTEND_URL=http://localhost:5173
 VITE_API_URL=http://localhost:5000/api
 ```
 
-## Design System
-
-### Colors
-- **Primary Green**: #4A7C59 (Nature-inspired balance and growth)
-- **Secondary Orange**: #E87D3E (Energy and vitality)
-- **Background**: #F8F9F5 (Soft, calming neutral)
-
-### Typography
-- **Headings**: Playfair Display (Serif, elegant)
-- **Body**: Inter (Sans-serif, clean and readable)
-
-## Contributing
-
-This is a personal project, but suggestions and feedback are welcome!
-
-## License
-
-MIT License - feel free to use this project for learning and personal use.
-
-## Support
-
-For issues or questions:
-1. Check the documentation above
-2. Review the API endpoints and models
-3. Ensure your environment variables are correctly set
-4. Verify your AI API key has sufficient credits
-
-## Acknowledgments
-
-- Built with love for fitness and technology
-- Powered by OpenAI GPT-4 / Anthropic Claude
 - UI inspired by nature and mindful living
 - Material UI for the beautiful component library
 
