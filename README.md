@@ -17,7 +17,7 @@
 
 ## Overview
 
-FitSage is an AI-powered fitness companion that combines intelligent workout planning with mindful living. Built with the MERN stack and powered by Large Language Models (GPT-4/Claude), it provides personalized workout and nutrition plans, progress tracking, and real-time AI coaching.
+FitSage is an AI-powered fitness companion that combines intelligent workout planning with mindful living. Built with the MERN stack and powered by Large Language Models (GEMINI) , it provides personalized workout and nutrition plans, progress tracking, and real-time AI coaching.
 
 ### Key Highlights
 - **AI-Powered**: Leverages GPT-4 or Claude for truly personalized fitness guidance
@@ -61,8 +61,8 @@ FitSage is an AI-powered fitness companion that combines intelligent workout pla
 - **bcryptjs** - Password hashing
 
 ### AI Integration
-- **OpenAI API** (GPT-4) or **Anthropic API** (Claude) for:
-  - Personalized workout plan generation
+- **Google Gemini API** (Primary - FREE with generous limits) or **OpenAI/Anthropic** (Paid alternatives)
+  - Personalized workout plan generation using Gemini 2.5 Flash
   - Custom nutrition plan creation
   - Conversational AI coaching
 
@@ -70,7 +70,7 @@ FitSage is an AI-powered fitness companion that combines intelligent workout pla
 
 - Node.js (v18 or higher)
 - MongoDB Atlas account or local MongoDB instance
-- OpenAI API key or Anthropic API key
+- Google Gemini API key (FREE - recommended) or OpenAI/Anthropic API key
 
 ## Installation
 
@@ -103,9 +103,15 @@ cp .env.example .env
 3. Get your connection string
 4. Replace `<username>`, `<password>`, and `<cluster-url>` in your `.env` file
 
-#### AI API Key:
-- **For OpenAI**: Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-- **For Anthropic**: Get your API key from [Anthropic Console](https://console.anthropic.com/)
+#### AI API Key (Choose ONE):
+- **Google Gemini** (Recommended - FREE): Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+  - No credit card required
+  - 15 requests/minute, 1500 requests/day
+  - Set `AI_PROVIDER=gemini` in .env
+- **OpenAI** (Paid): Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+  - Set `AI_PROVIDER=openai` in .env
+- **Anthropic** (Paid): Get your API key from [Anthropic Console](https://console.anthropic.com/)
+  - Set `AI_PROVIDER=anthropic` in .env
 
 ### 3. Frontend Setup
 
@@ -249,6 +255,22 @@ FitSage/
 ### Chat
 - `POST /api/chat` - Send message to AI coach
 
+## Deployment
+
+### Backend (Render)
+1. Create a new Web Service on [Render](https://render.com)
+2. Connect your repository
+3. Set build command: `cd backend && npm install`
+4. Set start command: `cd backend && npm start`
+5. Add environment variables from `.env`
+
+### Frontend (Vercel)
+1. Install Vercel CLI: `npm i -g vercel`
+2. Navigate to frontend: `cd frontend`
+3. Run: `vercel`
+4. Set environment variable: `VITE_API_URL` to your backend URL
+5. Follow the prompts to deploy
+
 ## Environment Variables
 
 ### Backend (.env)
@@ -257,9 +279,13 @@ PORT=5000
 NODE_ENV=development
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/fitsage
 JWT_SECRET=your_secret_key
-OPENAI_API_KEY=your_openai_key
-ANTHROPIC_API_KEY=your_anthropic_key
-AI_PROVIDER=openai
+
+# AI Provider (choose one)
+AI_PROVIDER=gemini
+GEMINI_API_KEY=your_gemini_key
+# OPENAI_API_KEY=your_openai_key
+# ANTHROPIC_API_KEY=your_anthropic_key
+
 FRONTEND_URL=http://localhost:5173
 ```
 
@@ -268,8 +294,33 @@ FRONTEND_URL=http://localhost:5173
 VITE_API_URL=http://localhost:5000/api
 ```
 
-- UI inspired by nature and mindful living
-- Material UI for the beautiful component library
+## Design System
+
+### Colors
+- **Primary Green**: #4A7C59 (Nature-inspired balance and growth)
+- **Secondary Orange**: #E87D3E (Energy and vitality)
+- **Background**: #F8F9F5 (Soft, calming neutral)
+
+### Typography
+- **Headings**: Playfair Display (Serif, elegant)
+- **Body**: Inter (Sans-serif, clean and readable)
+
+## Contributing
+
+This is a personal project, but suggestions and feedback are welcome!
+
+## License
+
+MIT License - feel free to use this project for learning and personal use.
+
+## Support
+
+For issues or questions:
+1. Check the documentation above
+2. Review the API endpoints and models
+3. Ensure your environment variables are correctly set
+4. Verify your AI API key has sufficient credits
+
 
 ---
 
