@@ -1,15 +1,46 @@
-# FitSage - Train Smart. Live Wise.
+<div align="center">
+  <h1>FitSage - Train Smart. Live Wise.</h1>
 
-FitSage is an AI-powered fitness companion that combines intelligent workout planning with mindful living. Built with the MERN stack and powered by Large Language Models (LLMs), it provides personalized workout and nutrition plans, progress tracking, and real-time AI coaching.
+  <p>
+    <strong>An AI-powered fitness companion that transforms your wellness journey</strong>
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react" alt="React" />
+    <img src="https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js" alt="Node.js" />
+    <img src="https://img.shields.io/badge/MongoDB-Atlas-brightgreen?style=for-the-badge&logo=mongodb" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/AI-Powered-orange?style=for-the-badge&logo=openai" alt="AI Powered" />
+  </p>
+</div>
+
+---
+
+## Overview
+
+FitSage is an AI-powered fitness companion that combines intelligent workout planning with mindful living. Built with the MERN stack and powered by Large Language Models (GPT-4/Claude), it provides personalized workout and nutrition plans, progress tracking, and real-time AI coaching.
+
+### Key Highlights
+- **AI-Powered**: Leverages GPT-4 or Claude for truly personalized fitness guidance
+- **Smart Tracking**: Comprehensive progress monitoring with beautiful visualizations
+- **AI Coach**: 24/7 personal trainer in your pocket
+- **Streak System**: Gamified motivation to keep you consistent
+- **Responsive**: Beautiful UI that works seamlessly on all devices
 
 ## Features
 
+### Core Functionality
 - **AI-Powered Personalization**: Generate custom workout and nutrition plans based on your profile, goals, and preferences
 - **Smart Progress Tracking**: Monitor your fitness journey with detailed statistics and visual charts
 - **AI Coach Chat**: Get instant guidance, tips, and motivation from your personal AI trainer
 - **Streak System**: Stay motivated with daily workout streaks and achievements
 - **Comprehensive Dashboard**: View all your fitness metrics and active plans at a glance
 - **Responsive Design**: Beautiful, mobile-friendly interface built with Material UI
+
+### What Makes FitSage Special
+- **Truly Personalized**: Unlike generic fitness apps, FitSage uses advanced AI to understand your unique needs
+- **Holistic Approach**: Combines workouts, nutrition, and mental wellness in one platform
+- **Adaptive Learning**: Plans evolve based on your progress and feedback
+- **Privacy-First**: Your data stays secure with JWT authentication and encrypted storage
 
 ## Tech Stack
 
@@ -290,4 +321,4 @@ For issues or questions:
 
 ---
 
-**Train Smart. Live Wise.** 🧘‍♂️💪
+**Train Smart. Live Wise.**
